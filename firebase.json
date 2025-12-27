@@ -1,5 +1,6 @@
 {
     "hosting": {
+        "site": "uploadyourbill-d2e18",
         "public": "dist",
         "ignore": [
             "firebase.json",

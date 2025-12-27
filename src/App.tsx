@@ -15,7 +15,7 @@ const App: React.FC = () => {
               <div className="bg-primary p-1.5 rounded-lg">
                 <Sun className="w-6 h-6 text-black" />
               </div>
-              <span>SOLAR<span className="text-primary">GEN</span></span>
+              <span className="text-3xl font-black tracking-tighter">Upload Your <span className="text-primary">Bill</span></span>
             </div>
             <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-text-muted">
               <a href="#" className="hover:text-white transition-colors">Residential</a>
