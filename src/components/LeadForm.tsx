@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { supabase } from '../lib/supabase';
@@ -15,6 +16,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export const LeadForm: React.FC = () => {
+    const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [file, setFile] = useState<File | null>(null);
@@ -74,7 +76,7 @@ export const LeadForm: React.FC = () => {
             setIsSuccess(true);
 
             setTimeout(() => {
-                window.location.href = `/bill/${slug}`;
+                navigate(`/bill/${slug}`);
             }, 2500);
 
         } catch (error) {
